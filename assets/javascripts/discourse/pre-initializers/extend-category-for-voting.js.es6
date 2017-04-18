@@ -38,7 +38,7 @@ function initialize(api) {
 export default {
   name: 'extend-category-for-voting',
   before: 'inject-discourse-objects',
-  initialize(container) {
+  initialize() {
 
     withPluginApi('0.8.4', api => {
       initialize(api, container);
@@ -51,7 +51,7 @@ export default {
         return `${url}/l/votes`;
       },
 
-      @computed('custom_fields.enable_topic_voting')
+      @property('custom_fields.enable_topic_voting')
       enable_topic_voting: {
         get(enableField) {
           return enableField === "true";
