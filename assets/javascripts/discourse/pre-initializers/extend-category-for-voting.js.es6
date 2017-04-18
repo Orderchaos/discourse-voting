@@ -1,4 +1,4 @@
-import computed from 'ember-addons/ember-computed-decorators';
+import property from 'ember-addons/ember-computed-decorators';
 import Category from 'discourse/models/category';
 
 
